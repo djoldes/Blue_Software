@@ -55,5 +55,10 @@ namespace Blue_Software
                 txtpassword.UseSystemPasswordChar = false;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
