@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -148,6 +149,7 @@
             this.txtUserName.Location = new System.Drawing.Point(58, 166);
             this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
+            this.txtUserName.PlaceholderText = "Username";
             this.txtUserName.Size = new System.Drawing.Size(205, 25);
             this.txtUserName.TabIndex = 6;
             // 
@@ -159,8 +161,24 @@
             this.txtpassword.Location = new System.Drawing.Point(58, 218);
             this.txtpassword.Multiline = true;
             this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '*';
+            this.txtpassword.PlaceholderText = "Password";
             this.txtpassword.Size = new System.Drawing.Size(205, 25);
             this.txtpassword.TabIndex = 6;
+            this.txtpassword.UseSystemPasswordChar = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
+            this.checkBox1.Location = new System.Drawing.Point(58, 252);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(70, 20);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "Show ";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Login
             // 
@@ -168,6 +186,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(290, 439);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label3);
@@ -205,5 +224,6 @@
         private Label label3;
         private TextBox txtUserName;
         private TextBox txtpassword;
+        private CheckBox checkBox1;
     }
 }
