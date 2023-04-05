@@ -1,9 +1,12 @@
 using MongoDB.Driver;
+using System.Data;
+using System.Data.SqlClient;
+
 namespace Blue_Software
 {
     public partial class Login : Form
     {
-
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=Users_Blue;Integrated Security=True");
         public Login()
         {
             InitializeComponent();
@@ -16,22 +19,46 @@ namespace Blue_Software
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text == string.Empty || txtpassword.Text == string.Empty)
+            string username, user_password;
+            username = txtUserName.Text;
+            user_password = txtpassword.Text;
+            
+            try
             {
-                MessageBox.Show("Username and password must be filled out!");
+                String querry = "SELECT * FROM SignUp_Blue where Username = '" + txtUserName.Text + "' AND password = '" + txtpassword.Text + "'";
+                SqlDataAdapter sda = new SqlDataAdapter(querry, con);
+                
+                DataTable dtable = new DataTable();
+                sda.Fill(dtable);
+
+                if(dtable.Rows.Count > 0)
+                {
+                    username = txtUserName.Text;
+                    user_password = txtpassword.Text;
+
+                    Form1 form1 = new Form1();
+                    form1.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid login details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    txtUserName.Clear();
+                    txtpassword.Clear();
+
+                    txtUserName.Focus();
+                }
             }
-            else if (txtUserName.Text == "user" && txtpassword.Text == "1234")
+            catch
             {
-                new Form1().Show();
-                this.Hide();
+                MessageBox.Show("Error");
             }
-            else
+            finally
             {
-                MessageBox.Show("The username or the password you entered is incorrect, try again!");
-                txtUserName.Clear();
-                txtpassword.Clear();
-                txtUserName.Focus();
+                con.Close();
             }
+
         }
 
         private void label2_Click(object sender, EventArgs e)
