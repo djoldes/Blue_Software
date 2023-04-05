@@ -26,11 +26,19 @@ namespace Blue_Software
             this.Hide();*/
             con.Open();
             SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into SignUp_Blue values('" + txtFirstName + "','" + txtLastName + "')";
-            cmd.ExecuteNonQuery();
+            cmd.CommandType = CommandType.Text; 
+            if (txtUsername.Text == string.Empty || txtPassword.Text == string.Empty)
+            {
+                MessageBox.Show("Username and password must be filled out!");
+                txtFirstName.Focus();
+            }
+            else
+            {
+                cmd.CommandText = "insert into SignUp_Blue values('" + txtFirstName + "','" + txtLastName + "', '" + txtEmail + "', '" + txtUsername + "', '" + txtPassword + "')";
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data added succesfully");
+            }
             con.Close();
-            MessageBox.Show("Data added succesfully");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -38,6 +46,5 @@ namespace Blue_Software
             Application.Exit();
         }
 
-        
     }
 }
