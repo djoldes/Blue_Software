@@ -1,7 +1,9 @@
+using MongoDB.Driver;
 namespace Blue_Software
 {
     public partial class Login : Form
     {
+
         public Login()
         {
             InitializeComponent();
@@ -18,7 +20,7 @@ namespace Blue_Software
             {
                 MessageBox.Show("Username and password must be filled out!");
             }
-            if (txtUserName.Text == "your_user_name" && txtpassword.Text == "your_password")
+            else if (txtUserName.Text == "user" && txtpassword.Text == "1234")
             {
                 new Form1().Show();
                 this.Hide();
@@ -41,7 +43,8 @@ namespace Blue_Software
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+            new SignUp().Show();
+            this.Hide();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

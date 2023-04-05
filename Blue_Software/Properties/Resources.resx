@@ -124,13 +124,16 @@
   <data name="png-clipart-profile-logo-computer-icons-user-user-blue-heroes-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-clipart-profile-logo-computer-icons-user-user-blue-heroes-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="security" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\security.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="profile_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="security" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\security.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
