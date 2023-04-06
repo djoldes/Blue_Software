@@ -33,5 +33,12 @@ namespace Blue_Software
         {
             txtQuest.Focus();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.TextPostare = txtQuest.Text;
+            home.Show();
+        }
     }
 }

@@ -12,9 +12,21 @@ namespace Blue_Software
 {
     public partial class Home : Form
     {
+        public string TextPostare
+        {
+            get { return _textPostare; }
+            set { _textPostare = value; labelPostare.Text = value; }
+        }
+        private string _textPostare;
         public Home()
         {
             InitializeComponent();
+            Label label = new Label();
+            label.AutoSize = true;
+            label.Location = new Point(10, 10);
+            label.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.Controls.Add(label);
+            TextPostare = _textPostare;
         }
 
         private void button2_Click(object sender, EventArgs e)

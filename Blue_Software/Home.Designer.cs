@@ -31,6 +31,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.homeTitle = new System.Windows.Forms.Label();
+            this.labelPostare = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button2
@@ -66,6 +67,14 @@
             this.homeTitle.TabIndex = 15;
             this.homeTitle.Text = "Home";
             // 
+            // labelPostare
+            // 
+            this.labelPostare.AutoSize = true;
+            this.labelPostare.Location = new System.Drawing.Point(12, 49);
+            this.labelPostare.Name = "labelPostare";
+            this.labelPostare.Size = new System.Drawing.Size(0, 20);
+            this.labelPostare.TabIndex = 16;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -73,6 +82,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 567);
+            this.Controls.Add(this.labelPostare);
             this.Controls.Add(this.homeTitle);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
@@ -88,5 +98,6 @@
         private Button button2;
         private Panel panel1;
         private Label homeTitle;
+        private Label labelPostare;
     }
 }
