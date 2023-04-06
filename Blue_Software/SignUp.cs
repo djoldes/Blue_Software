@@ -27,7 +27,7 @@ namespace Blue_Software
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text; 
-            if (txtUsername.Text == string.Empty || txtPassword.Text == string.Empty)
+            if (txtUsername.Text == string.Empty || txtPassword.Text == string.Empty || txtEmail.Text == string.Empty || txtFirstName.Text == string.Empty || txtLastName.Text == string.Empty)
             {
                 MessageBox.Show("Username and password must be filled out!");
                 txtFirstName.Focus();
