@@ -14,6 +14,8 @@ namespace Blue_Software
 {
     public partial class SignUp : Form
     {
+        Login login = new Login();
+        Form1 form1 = new Form1();
         SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=Users_Blue;Integrated Security=True");
         public SignUp()
         {
@@ -25,16 +27,26 @@ namespace Blue_Software
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text; 
-            if (txtUsername.Text == string.Empty || txtPassword.Text == string.Empty || txtEmail.Text == string.Empty || txtFirstName.Text == string.Empty || txtLastName.Text == string.Empty)
+            if (txtUsername.Text == string.Empty || txtPassword.Text == string.Empty || txtEmail.Text == string.Empty || txtFirstName.Text == string.Empty || txtLastName.Text == string.Empty || txtPasswordCheck.Text == string.Empty)
             {
                 MessageBox.Show("Username and password must be filled out!");
                 txtFirstName.Focus();
             }
+            else if (txtPassword.Text != txtPasswordCheck.Text)
+            {
+                MessageBox.Show("Parolele nu corespund", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPassword.Clear();
+                txtPasswordCheck.Clear();
+                txtPassword.Focus();
+            }
+
             else
             {
                 cmd.CommandText = "insert into SignUp_Blue values('" + txtFirstName.Text + "','" + txtLastName.Text + "', '" + txtEmail.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "')";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data added succesfully");
+                form1.Show();
+                this.Close();
             }
             con.Close();
         }
@@ -46,7 +58,6 @@ namespace Blue_Software
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
             login.Show();
             this.Close();
         }

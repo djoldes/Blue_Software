@@ -28,5 +28,10 @@ namespace Blue_Software
             this.Close();
            
         }
+
+        private void AddQuest_Load(object sender, EventArgs e)
+        {
+            txtQuest.Focus();
+        }
     }
 }
