@@ -44,6 +44,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.cbx_password = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -153,11 +155,9 @@
             this.txtPassword.Location = new System.Drawing.Point(40, 398);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "Choose Your Password";
             this.txtPassword.Size = new System.Drawing.Size(322, 25);
             this.txtPassword.TabIndex = 9;
-            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // panel6
             // 
@@ -175,11 +175,9 @@
             this.txtPasswordCheck.Location = new System.Drawing.Point(40, 449);
             this.txtPasswordCheck.Multiline = true;
             this.txtPasswordCheck.Name = "txtPasswordCheck";
-            this.txtPasswordCheck.PasswordChar = '*';
             this.txtPasswordCheck.PlaceholderText = "Re-Enter Your Password";
             this.txtPasswordCheck.Size = new System.Drawing.Size(322, 25);
             this.txtPasswordCheck.TabIndex = 9;
-            this.txtPasswordCheck.UseSystemPasswordChar = true;
             // 
             // button1
             // 
@@ -219,11 +217,39 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
+            this.button3.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(40, 576);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(322, 29);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Back to Log In";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // cbx_password
+            // 
+            this.cbx_password.AutoSize = true;
+            this.cbx_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbx_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
+            this.cbx_password.Location = new System.Drawing.Point(295, 488);
+            this.cbx_password.Name = "cbx_password";
+            this.cbx_password.Size = new System.Drawing.Size(66, 20);
+            this.cbx_password.TabIndex = 14;
+            this.cbx_password.Text = "Show";
+            this.cbx_password.UseVisualStyleBackColor = true;
+            this.cbx_password.CheckedChanged += new System.EventHandler(this.cbx_password_CheckedChanged);
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 600);
+            this.ClientSize = new System.Drawing.Size(400, 620);
+            this.Controls.Add(this.cbx_password);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
@@ -244,6 +270,7 @@
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp";
+            this.Load += new System.EventHandler(this.SignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +294,7 @@
         private Button button1;
         private Label label2;
         private Button button2;
+        private Button button3;
+        private CheckBox cbx_password;
     }
 }

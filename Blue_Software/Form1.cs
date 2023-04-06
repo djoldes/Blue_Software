@@ -62,5 +62,7 @@ namespace Blue_Software
         {
             FormFunctions.LoadForm(addquest , panel3);
         }
+
+        
     }
 }

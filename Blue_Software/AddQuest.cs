@@ -12,6 +12,8 @@ namespace Blue_Software
 {
     public partial class AddQuest : Form
     {
+
+        
         public AddQuest()
         {
             InitializeComponent();
@@ -19,7 +21,12 @@ namespace Blue_Software
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Form1 form1 = new Form1();
+            form1.pictureBox2.Visible = true;
+            form1.pictureBox2.Image = Image.FromFile(@"C:\Users\David Joldes\Downloads\Blue.png");
+            form1.ShowDialog();
+            this.Close();
+           
         }
     }
 }

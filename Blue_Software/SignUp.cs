@@ -22,8 +22,6 @@ namespace Blue_Software
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*new Form1().Show();
-            this.Hide();*/
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text; 
@@ -46,5 +44,33 @@ namespace Blue_Software
             Application.Exit();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
+
+        private void cbx_password_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbx_password.Checked)
+            {
+                txtPassword.PasswordChar = '\0';
+                txtPasswordCheck.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+                txtPasswordCheck.PasswordChar = '*';
+            }
+        }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+            this.Show();
+            txtFirstName.Focus();
+            txtPassword.PasswordChar = '*';
+            txtPasswordCheck.PasswordChar = '*';
+        }
     }
 }

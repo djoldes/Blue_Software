@@ -14,7 +14,7 @@ namespace Blue_Software
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            txtpassword.PasswordChar = '*';
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -78,11 +78,11 @@ namespace Blue_Software
         {
             if (checkBox1.Checked)
             {
-                txtpassword.UseSystemPasswordChar = true;
+                txtpassword.PasswordChar = '\0';
             }
             else
             {
-                txtpassword.UseSystemPasswordChar = false;
+                txtpassword.PasswordChar = '*';
             }
         }
 
