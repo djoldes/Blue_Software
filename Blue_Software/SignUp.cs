@@ -34,7 +34,7 @@ namespace Blue_Software
             }
             else
             {
-                cmd.CommandText = "insert into SignUp_Blue values('" + txtFirstName + "','" + txtLastName + "', '" + txtEmail + "', '" + txtUsername + "', '" + txtPassword + "')";
+                cmd.CommandText = "insert into SignUp_Blue values('" + txtFirstName.Text + "','" + txtLastName.Text + "', '" + txtEmail.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "')";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data added succesfully");
             }
