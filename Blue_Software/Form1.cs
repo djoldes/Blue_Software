@@ -14,6 +14,8 @@ namespace Blue_Software
     public partial class Form1 : Form
     {
         bool sidebarExpand;
+        Form home = new Home();
+        Form addquest = new AddQuest();
         public Form1()
         {
             InitializeComponent();
@@ -49,6 +51,16 @@ namespace Blue_Software
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormFunctions.LoadForm(home, panel3);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormFunctions.LoadForm(addquest , panel3);
         }
     }
 }
