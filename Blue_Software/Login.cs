@@ -1,12 +1,15 @@
-
+﻿
 using System.Data;
 using System.Data.SqlClient;
+using System.Reflection.Metadata;
+using Volo.Abp.Users;
 
 namespace Blue_Software
 {
     public partial class Login : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=Users_Blue;Integrated Security=True");
+        User currentUser;
         public Login()
         {
             InitializeComponent();
@@ -16,6 +19,8 @@ namespace Blue_Software
         {
             txtpassword.PasswordChar = '*';
         }
+
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -35,6 +40,10 @@ namespace Blue_Software
                 {
                     username = txtUserName.Text;
                     user_password = txtpassword.Text;
+
+                    int credits = GetCreditsForUser(username);
+                    currentUser = new User { Username = username, Credit = credits };
+                    AppData.CurrentUser = new User(username, credits);
 
                     Form1 form1 = new Form1();
                     form1.Show();
@@ -59,6 +68,27 @@ namespace Blue_Software
                 con.Close();
             }
 
+        }
+
+        public int GetCreditsForUser(string username)
+        {
+            // Conectarea la baza de date
+            string connString = @"Data Source=.;Initial Catalog=Users_Blue;Integrated Security=True";
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+
+                // Interogarea bazei de date pentru a obține valoarea creditului pentru utilizatorul specificat
+                string query = "SELECT Credit FROM SignUp_Blue WHERE Username = @Username";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Username", username);
+                int credits = (int)cmd.ExecuteScalar();
+
+                // Închiderea conexiunii la baza de date
+                conn.Close();
+
+                return credits;
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)

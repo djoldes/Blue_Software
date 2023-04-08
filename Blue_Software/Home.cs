@@ -14,21 +14,10 @@ namespace Blue_Software
     public partial class Home : Form
     {
         SqlConnection connection = new SqlConnection("Data Source=desktop-07mhrb4;Initial Catalog=Users_Blue;Integrated Security=True");
-        /*public string TextPostare
-        {
-            get { return _textPostare; }
-            set { _textPostare = value; labelPostare.Text = value; }
-        }
-        private string _textPostare;*/
+        
         public Home()
         {
             InitializeComponent();
-            /*Label label = new Label();
-            label.AutoSize = true;
-            label.Location = new Point(10, 10);
-            label.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            this.Controls.Add(label);
-            TextPostare = _textPostare;*/
         }
         private void DisplaySavedText()
         {
@@ -42,7 +31,6 @@ namespace Blue_Software
                 {
                     string text = reader["Text"].ToString();
 
-                    // Creează o nouă etichetă și adaugă textul în aceasta
                     Label label = new Label();
                     label.AutoSize = true;
                     label.Text = text;
@@ -52,10 +40,8 @@ namespace Blue_Software
                     label.TextAlign = ContentAlignment.MiddleCenter;
                     label.BorderStyle = BorderStyle.FixedSingle;
                     label.Padding = new Padding(-10);
-                    // Setează handler pentru evenimentul Click al etichetelor
                     label.Click += new EventHandler(Label_Click);
 
-                    // Adaugă eticheta în controlul FlowLayoutPanel
                     flowLayoutPanel1.Controls.Add(label);
                 }
 
@@ -72,11 +58,9 @@ namespace Blue_Software
         }
         private void Label_Click(object sender, EventArgs e)
         {
-            // Obțineți textul etichetei apăsate
             Label label = (Label)sender;
             string text = label.Text;
-
-            // Deschideți un nou formular și afișați textul în acesta
+            
             Quest form2 = new Quest(text);
             form2.ShowDialog();
         }
@@ -91,8 +75,7 @@ namespace Blue_Software
         }
 
         private void Home_Load(object sender, EventArgs e)
-        {
-            /*CheckDatabase();*/
+        {   
             DisplaySavedText();
         }
 

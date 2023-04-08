@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Volo.Abp.Users;
 
 namespace Blue_Software
 {
@@ -20,13 +21,15 @@ namespace Blue_Software
             InitializeComponent();
         }
 
+        
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.pictureBox2.Visible = true;
-            form1.pictureBox2.Image = Image.FromFile(@"C:\Users\David Joldes\Downloads\Blue.png");
-            form1.ShowDialog();
-            this.Close();
+                Form1 form1 = new Form1();
+                form1.pictureBox2.Visible = true;
+                form1.pictureBox2.Image = Image.FromFile(@"C:\Users\David Joldes\Downloads\Blue.png");
+                form1.ShowDialog();
+                this.Close();
         }
         private void CheckDatabase()
         {
@@ -72,32 +75,38 @@ namespace Blue_Software
                 connection.Close();
             }
         }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {
-            /*Home home = new Home();
-            home.TextPostare = txtQuest.Text;
-            home.Show();*/
+            int credit = AppData.CurrentUser.Credit;
             string textToSave = txtQuest.Text;
-
-            try
+            if(credit >= 50)
             {
-                connection.Open();
-                SqlCommand command = new SqlCommand("INSERT INTO Texte (Text) VALUES (@text)", connection);
-                command.Parameters.AddWithValue("@text", textToSave);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Text salvat cu succes!");
+                try
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("INSERT INTO Texte (Text) VALUES (@text)", connection);
+                    command.Parameters.AddWithValue("@text", textToSave);
+                    command.ExecuteNonQuery();
+                    AppData.CurrentUser.UpdateCredit(credit -= 50);
+                    MessageBox.Show("Text salvat cu succes!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("A apărut o eroare: " + ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+                txtQuest.ResetText();
+                txtQuest.Text = string.Empty;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("A apărut o eroare: " + ex.Message);
+                MessageBox.Show("Creditul este prea mic pentru a posta un quest nou." + " " + "Incearca sa rezolvi un quest pentru a castiga credit!");
             }
-            finally
-            {
-                connection.Close();
-            }
-            txtQuest.ResetText();
-            txtQuest.Text = string.Empty;
         }
+
     }
 }

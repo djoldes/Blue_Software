@@ -31,12 +31,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtQuest = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.addquestTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,30 @@
             this.panel1.Size = new System.Drawing.Size(774, 536);
             this.panel1.TabIndex = 13;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.LightGray;
+            this.button2.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
+            this.button2.Location = new System.Drawing.Point(582, 495);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(189, 29);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Upload the quest";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.LightGray;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(11, 401);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(760, 34);
+            this.textBox1.TabIndex = 2;
+            // 
             // txtQuest
             // 
             this.txtQuest.BackColor = System.Drawing.Color.LightGray;
@@ -86,6 +110,17 @@
             this.txtQuest.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtQuest.Size = new System.Drawing.Size(760, 302);
             this.txtQuest.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
+            this.label1.Location = new System.Drawing.Point(3, 366);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(446, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Enter the answer for your quest:";
             // 
             // label2
             // 
@@ -108,41 +143,6 @@
             this.addquestTitle.Size = new System.Drawing.Size(105, 23);
             this.addquestTitle.TabIndex = 14;
             this.addquestTitle.Text = "AddQuest";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
-            this.label1.Location = new System.Drawing.Point(3, 366);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(446, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Enter the answer for your quest:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(11, 401);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(760, 34);
-            this.textBox1.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LightGray;
-            this.button2.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
-            this.button2.Location = new System.Drawing.Point(582, 495);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(189, 29);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Upload the quest";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // AddQuest
             // 
