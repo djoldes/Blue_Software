@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.homeTitle = new System.Windows.Forms.Label();
             this.labelPostare = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // button2
@@ -75,6 +76,13 @@
             this.labelPostare.Size = new System.Drawing.Size(0, 20);
             this.labelPostare.TabIndex = 16;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 36);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(795, 526);
+            this.flowLayoutPanel1.TabIndex = 17;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -82,6 +90,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 567);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.labelPostare);
             this.Controls.Add(this.homeTitle);
             this.Controls.Add(this.panel1);
@@ -89,6 +98,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,5 +109,6 @@
         private Panel panel1;
         private Label homeTitle;
         private Label labelPostare;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
