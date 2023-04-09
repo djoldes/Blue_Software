@@ -24,23 +24,69 @@ namespace Blue_Software
         private void btnAnswer_Click(object sender, EventArgs e)
         {
             int credit = AppData.CurrentUser.Credit;
-            string connString = @"Data Source =.; Initial Catalog = Users_Blue; Integrated Security = True";
-            SqlConnection conn = new SqlConnection(connString);
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Texte WHERE Answer = @text", conn);
-            cmd.Parameters.AddWithValue("@text", textAnswer.Text);
-            conn.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.HasRows)
+            string answer = textAnswer.Text;
+            string connectionString = @"Data Source=.;Initial Catalog=Users_Blue;Integrated Security=True";
+
+            try
             {
-                MessageBox.Show("The answer is correct! You won 50 credits!");
-                AppData.CurrentUser.UpdateCredit(credit += 50);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    SqlCommand checkCommand = new SqlCommand("SELECT COUNT(*) FROM Texte WHERE Answer = @answer", connection);
+                    checkCommand.Parameters.AddWithValue("@answer", answer);
+                    int answerCount = (int)checkCommand.ExecuteScalar();
+
+                    if (answerCount > 0)
+                    {
+                        SqlCommand updateCommand = new SqlCommand("UPDATE Texte SET AnswersNumber = AnswersNumber + 1 WHERE Answer = @answer", connection);
+                        updateCommand.Parameters.AddWithValue("@answer", answer);
+                        updateCommand.ExecuteNonQuery();
+
+                        SqlCommand creditCommand = new SqlCommand("SELECT AnswersNumber FROM Texte WHERE Answer = @answer", connection);
+                        creditCommand.Parameters.AddWithValue("@answer", answer);
+                        int answerNumber = (int)creditCommand.ExecuteScalar();
+
+                        if (answerNumber == 1)
+                        {
+                            AppData.CurrentUser.UpdateCredit(credit += 30);
+                            MessageBox.Show("The answer is correct!" +
+                                "You won 30 credits!");
+                        }
+                        else if (answerNumber == 2)
+                        {
+                            AppData.CurrentUser.UpdateCredit(credit += 20);
+                            MessageBox.Show("The answer is correct!" +
+                                "You won 20 credits!");
+                        }
+                        else if (answerNumber == 3)
+                        {
+                            AppData.CurrentUser.UpdateCredit(credit += 10);
+                            MessageBox.Show("The answer is correct!" +
+                                "You won 10 credits!");
+                        }
+                        else if(answerNumber > 3)
+                        {
+                            MessageBox.Show("The answer is correct!" +
+                                "Your answer is number:" + answerNumber +
+                                "You did not win any credits!:(");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("The answer is wrong!");
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("The answer is wrong!");
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
-            reader.Close();
-            conn.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

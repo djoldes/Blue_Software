@@ -54,7 +54,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
-            this.button1.Location = new System.Drawing.Point(745, -1);
+            this.button1.Location = new System.Drawing.Point(770, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 30);
             this.button1.TabIndex = 11;
@@ -73,17 +73,17 @@
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Location = new System.Drawing.Point(1, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(774, 536);
+            this.panel1.Size = new System.Drawing.Size(799, 536);
             this.panel1.TabIndex = 13;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.LightGray;
-            this.button2.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
-            this.button2.Location = new System.Drawing.Point(582, 495);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
+            this.button2.Font = new System.Drawing.Font("Bahnschrift Condensed", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(585, 461);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(189, 29);
+            this.button2.Size = new System.Drawing.Size(189, 50);
             this.button2.TabIndex = 3;
             this.button2.Text = "Upload the quest";
             this.button2.UseVisualStyleBackColor = false;
@@ -97,7 +97,7 @@
             this.txtAnswer.Multiline = true;
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAnswer.Size = new System.Drawing.Size(760, 34);
+            this.txtAnswer.Size = new System.Drawing.Size(785, 34);
             this.txtAnswer.TabIndex = 2;
             // 
             // txtQuest
@@ -108,28 +108,28 @@
             this.txtQuest.Multiline = true;
             this.txtQuest.Name = "txtQuest";
             this.txtQuest.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtQuest.Size = new System.Drawing.Size(760, 302);
+            this.txtQuest.Size = new System.Drawing.Size(785, 302);
             this.txtQuest.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
-            this.label1.Location = new System.Drawing.Point(3, 366);
+            this.label1.Location = new System.Drawing.Point(3, 355);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(446, 32);
+            this.label1.Size = new System.Drawing.Size(384, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter the answer for your quest:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
             this.label2.Location = new System.Drawing.Point(3, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(399, 32);
+            this.label2.Size = new System.Drawing.Size(345, 41);
             this.label2.TabIndex = 0;
             this.label2.Text = "Enter the text for your quest:";
             // 
@@ -148,7 +148,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 567);
             this.Controls.Add(this.addquestTitle);

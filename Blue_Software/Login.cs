@@ -72,19 +72,16 @@ namespace Blue_Software
 
         public int GetCreditsForUser(string username)
         {
-            // Conectarea la baza de date
             string connString = @"Data Source=.;Initial Catalog=Users_Blue;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
 
-                // Interogarea bazei de date pentru a obține valoarea creditului pentru utilizatorul specificat
                 string query = "SELECT Credit FROM SignUp_Blue WHERE Username = @Username";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Username", username);
                 int credits = (int)cmd.ExecuteScalar();
 
-                // Închiderea conexiunii la baza de date
                 conn.Close();
 
                 return credits;

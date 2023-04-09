@@ -91,6 +91,14 @@ namespace Blue_Software
                     command.Parameters.AddWithValue("@answer", answer);
                     command.ExecuteNonQuery();
                     AppData.CurrentUser.UpdateCredit(credit -= 50);
+                    SqlCommand command2 = new SqlCommand("UPDATE Texte SET PostDate = @postDate WHERE Text = @text", connection);
+                    command2.Parameters.AddWithValue("@postDate", DateTime.Now);
+                    command2.Parameters.AddWithValue("@text", textToSave);
+                    command2.ExecuteNonQuery();
+                    SqlCommand command3 = new SqlCommand("UPDATE Texte SET AnswersNumber = 0 WHERE Text = @text", connection);
+                    command3.Parameters.AddWithValue("@text", textToSave);
+                    command3.ExecuteNonQuery();
+
                     MessageBox.Show("Text salvat cu succes!");
                 }
                 catch (Exception ex)
