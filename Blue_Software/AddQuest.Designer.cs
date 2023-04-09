@@ -32,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAnswer = new System.Windows.Forms.TextBox();
             this.txtQuest = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtAnswer);
             this.panel1.Controls.Add(this.txtQuest);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
@@ -89,16 +89,16 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // txtAnswer
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(11, 401);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(760, 34);
-            this.textBox1.TabIndex = 2;
+            this.txtAnswer.BackColor = System.Drawing.Color.LightGray;
+            this.txtAnswer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAnswer.Location = new System.Drawing.Point(11, 401);
+            this.txtAnswer.Multiline = true;
+            this.txtAnswer.Name = "txtAnswer";
+            this.txtAnswer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtAnswer.Size = new System.Drawing.Size(760, 34);
+            this.txtAnswer.TabIndex = 2;
             // 
             // txtQuest
             // 
@@ -175,7 +175,7 @@
         private Label label2;
         private TextBox txtQuest;
         private Button button2;
-        private TextBox textBox1;
+        private TextBox txtAnswer;
         private Label label1;
     }
 }

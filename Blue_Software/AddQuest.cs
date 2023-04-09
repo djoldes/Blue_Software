@@ -80,13 +80,15 @@ namespace Blue_Software
         {
             int credit = AppData.CurrentUser.Credit;
             string textToSave = txtQuest.Text;
+            string answer = txtAnswer.Text;
             if(credit >= 50)
             {
                 try
                 {
                     connection.Open();
-                    SqlCommand command = new SqlCommand("INSERT INTO Texte (Text) VALUES (@text)", connection);
+                    SqlCommand command = new SqlCommand("INSERT INTO Texte (Text, Answer) VALUES (@text, @answer)", connection);
                     command.Parameters.AddWithValue("@text", textToSave);
+                    command.Parameters.AddWithValue("@answer", answer);
                     command.ExecuteNonQuery();
                     AppData.CurrentUser.UpdateCredit(credit -= 50);
                     MessageBox.Show("Text salvat cu succes!");

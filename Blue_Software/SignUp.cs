@@ -42,7 +42,6 @@ namespace Blue_Software
 
             else
             {
-                //cmd.CommandText = "insert into SignUp_Blue values('" + txtFirstName.Text + "','" + txtLastName.Text + "', '" + txtEmail.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "')";
                 cmd.CommandText = "INSERT INTO SignUp_Blue (FirstName, LastName, Email, Username, Password, Credit) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "', '" + txtEmail.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', 100)";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data added succesfully");

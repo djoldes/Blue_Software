@@ -34,7 +34,7 @@ namespace Blue_Software
 
                 SqlCommand command = new SqlCommand("UPDATE SignUp_Blue SET Credit = @Credit WHERE Username = @Username", connection);
                 command.Parameters.AddWithValue("@Credit", newCredit);
-                command.Parameters.AddWithValue("@Username", "aaa");
+                command.Parameters.AddWithValue("@Username", Username);
                 command.ExecuteNonQuery();
 
                 // Actualizarea valorii creditului utilizatorului în obiectul CurrentUser
