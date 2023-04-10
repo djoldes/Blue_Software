@@ -16,6 +16,8 @@ namespace Blue_Software
         bool sidebarExpand;
         Form home = new Home();
         Form addquest = new AddQuest();
+        Form profile = new Profile();
+        Form leaderboard = new Leaderboard();
         public Form1()
         {
             InitializeComponent();
@@ -55,14 +57,26 @@ namespace Blue_Software
         
         private void button1_Click(object sender, EventArgs e)
         {
+            AppData.UpdateCurrentUser(AppData.CurrentUser);
             FormFunctions.LoadForm(home, panel3);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            AppData.UpdateCurrentUser(AppData.CurrentUser);
             FormFunctions.LoadForm(addquest , panel3);
         }
 
-        
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AppData.UpdateCurrentUser(AppData.CurrentUser);
+            FormFunctions.LoadForm(profile, panel3);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AppData.UpdateCurrentUser(AppData.CurrentUser);
+            FormFunctions.LoadForm(leaderboard, panel3);
+        }
     }
 }

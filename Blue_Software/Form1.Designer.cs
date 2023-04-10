@@ -37,6 +37,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,6 +51,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,6 +64,8 @@
             this.sidebar.Controls.Add(this.panel1);
             this.sidebar.Controls.Add(this.panel2);
             this.sidebar.Controls.Add(this.panel4);
+            this.sidebar.Controls.Add(this.panel5);
+            this.sidebar.Controls.Add(this.panel6);
             this.sidebar.Location = new System.Drawing.Point(0, -3);
             this.sidebar.MaximumSize = new System.Drawing.Size(243, 608);
             this.sidebar.MinimumSize = new System.Drawing.Size(35, 608);
@@ -145,6 +153,53 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.button4);
+            this.panel5.Location = new System.Drawing.Point(3, 239);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(250, 44);
+            this.panel5.TabIndex = 3;
+            // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Bauhaus 93", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
+            this.button4.Image = global::Blue_Software.Properties.Resources.icons8_customer_241;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(-2, -7);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(252, 48);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "       Profile";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.button5);
+            this.panel6.Location = new System.Drawing.Point(3, 289);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(250, 40);
+            this.panel6.TabIndex = 4;
+            // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Bauhaus 93", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
+            this.button5.Image = global::Blue_Software.Properties.Resources.icons8_leaderboard_24;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(-3, -3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(256, 43);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "      Leaderboard";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // sidebarTimer
             // 
             this.sidebarTimer.Interval = 10;
@@ -212,6 +267,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -234,5 +291,9 @@
         private Panel panel4;
         private Button button3;
         public PictureBox pictureBox2;
+        private Panel panel5;
+        private Button button4;
+        private Panel panel6;
+        private Button button5;
     }
 }

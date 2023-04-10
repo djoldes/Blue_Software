@@ -33,6 +33,10 @@ namespace Blue_Software
                 {
                     connection.Open();
 
+                    SqlCommand creditGainedCommand = new SqlCommand("SELECT CreditGained FROM SignUp_Blue WHERE Username = @id", connection);
+                    creditGainedCommand.Parameters.AddWithValue("@id", AppData.CurrentUser.Username);
+                    int creditGained = (int)creditGainedCommand.ExecuteScalar();
+
                     SqlCommand checkCommand = new SqlCommand("SELECT COUNT(*) FROM Texte WHERE Answer = @answer", connection);
                     checkCommand.Parameters.AddWithValue("@answer", answer);
                     int answerCount = (int)checkCommand.ExecuteScalar();
@@ -49,19 +53,19 @@ namespace Blue_Software
 
                         if (answerNumber == 1)
                         {
-                            AppData.CurrentUser.UpdateCredit(credit += 30);
+                            User.UpdateCredit(credit += 30, creditGained += 30);
                             MessageBox.Show("The answer is correct!" +
                                 "You won 30 credits!");
                         }
                         else if (answerNumber == 2)
                         {
-                            AppData.CurrentUser.UpdateCredit(credit += 20);
+                            User.UpdateCredit(credit += 20, creditGained += 20);
                             MessageBox.Show("The answer is correct!" +
                                 "You won 20 credits!");
                         }
                         else if (answerNumber == 3)
                         {
-                            AppData.CurrentUser.UpdateCredit(credit += 10);
+                            User.UpdateCredit(credit += 10, creditGained += 10);
                             MessageBox.Show("The answer is correct!" +
                                 "You won 10 credits!");
                         }

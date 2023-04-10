@@ -41,9 +41,7 @@ namespace Blue_Software
                     username = txtUserName.Text;
                     user_password = txtpassword.Text;
 
-                    int credits = GetCreditsForUser(username);
-                    currentUser = new User { Username = username, Credit = credits };
-                    AppData.CurrentUser = new User(username, credits);
+                    InitialiseUser(username);
 
                     Form1 form1 = new Form1();
                     form1.Show();
@@ -70,23 +68,12 @@ namespace Blue_Software
 
         }
 
-        public int GetCreditsForUser(string username)
+        public void InitialiseUser(string username)
         {
-            string connString = @"Data Source=.;Initial Catalog=Users_Blue;Integrated Security=True";
-            using (SqlConnection conn = new SqlConnection(connString))
-            {
-                conn.Open();
-
-                string query = "SELECT Credit FROM SignUp_Blue WHERE Username = @Username";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Username", username);
-                int credits = (int)cmd.ExecuteScalar();
-
-                conn.Close();
-
-                return credits;
-            }
+            AppData.CurrentUser = new User(username, User.GetCreditsForUser(username), User.GetCreditsGainedForUser(username));
         }
+
+        
 
         private void label2_Click(object sender, EventArgs e)
         {

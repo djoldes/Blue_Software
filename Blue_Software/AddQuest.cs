@@ -79,6 +79,7 @@ namespace Blue_Software
         private void button2_Click(object sender, EventArgs e)
         {
             int credit = AppData.CurrentUser.Credit;
+            int creditGained = AppData.CurrentUser.CreditGained;
             string textToSave = txtQuest.Text;
             string answer = txtAnswer.Text;
             if(credit >= 50)
@@ -90,7 +91,7 @@ namespace Blue_Software
                     command.Parameters.AddWithValue("@text", textToSave);
                     command.Parameters.AddWithValue("@answer", answer);
                     command.ExecuteNonQuery();
-                    AppData.CurrentUser.UpdateCredit(credit -= 50);
+                    User.UpdateCredit(credit -= 50, creditGained -= 0);
                     SqlCommand command2 = new SqlCommand("UPDATE Texte SET PostDate = @postDate WHERE Text = @text", connection);
                     command2.Parameters.AddWithValue("@postDate", DateTime.Now);
                     command2.Parameters.AddWithValue("@text", textToSave);
