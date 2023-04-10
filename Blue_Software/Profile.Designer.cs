@@ -29,12 +29,15 @@
         private void InitializeComponent()
         {
             this.txtUsername = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCredit = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCreditGained = new System.Windows.Forms.Label();
+            this.logout = new System.Windows.Forms.Button();
+            this.addquestTitle = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -47,18 +50,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(0, 24);
             this.txtUsername.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
-            this.label1.Location = new System.Drawing.Point(12, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 32);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Profile Data";
             // 
             // label2
             // 
@@ -118,18 +109,67 @@
             this.txtCreditGained.Size = new System.Drawing.Size(0, 24);
             this.txtCreditGained.TabIndex = 6;
             // 
+            // logout
+            // 
+            this.logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
+            this.logout.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.logout.ForeColor = System.Drawing.Color.White;
+            this.logout.Location = new System.Drawing.Point(334, 292);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(111, 39);
+            this.logout.TabIndex = 7;
+            this.logout.Text = "LogOut";
+            this.logout.UseVisualStyleBackColor = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
+            // addquestTitle
+            // 
+            this.addquestTitle.AutoSize = true;
+            this.addquestTitle.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.addquestTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
+            this.addquestTitle.Location = new System.Drawing.Point(1, 5);
+            this.addquestTitle.Name = "addquestTitle";
+            this.addquestTitle.Size = new System.Drawing.Size(75, 23);
+            this.addquestTitle.TabIndex = 15;
+            this.addquestTitle.Text = "Profile";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
+            this.panel2.Location = new System.Drawing.Point(1, 26);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 2);
+            this.panel2.TabIndex = 16;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
+            this.button1.Location = new System.Drawing.Point(771, -2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 30);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "<-";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addquestTitle);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.txtCreditGained);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCredit);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Profile";
@@ -143,11 +183,14 @@
         #endregion
 
         private Label txtUsername;
-        private Label label1;
         private Label label2;
         private Label label3;
         private Label txtCredit;
         private Label label4;
         private Label txtCreditGained;
+        private Button logout;
+        private Label addquestTitle;
+        private Panel panel2;
+        private Button button1;
     }
 }

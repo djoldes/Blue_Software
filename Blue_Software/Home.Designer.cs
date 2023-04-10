@@ -41,7 +41,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
-            this.button2.Location = new System.Drawing.Point(745, -1);
+            this.button2.Location = new System.Drawing.Point(771, -1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(30, 30);
             this.button2.TabIndex = 9;
@@ -54,7 +54,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
             this.panel1.Location = new System.Drawing.Point(1, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(774, 2);
+            this.panel1.Size = new System.Drawing.Size(800, 2);
             this.panel1.TabIndex = 10;
             // 
             // homeTitle
@@ -87,13 +87,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 567);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.labelPostare);
             this.Controls.Add(this.homeTitle);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";

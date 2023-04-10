@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -37,16 +36,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.addquestTitle = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
-            this.panel2.Location = new System.Drawing.Point(1, 28);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(774, 2);
-            this.panel2.TabIndex = 12;
             // 
             // button1
             // 
@@ -118,7 +110,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
             this.label1.Location = new System.Drawing.Point(3, 355);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(384, 41);
+            this.label1.Size = new System.Drawing.Size(372, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter the answer for your quest:";
             // 
@@ -129,7 +121,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
             this.label2.Location = new System.Drawing.Point(3, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(345, 41);
+            this.label2.Size = new System.Drawing.Size(335, 40);
             this.label2.TabIndex = 0;
             this.label2.Text = "Enter the text for your quest:";
             // 
@@ -143,6 +135,14 @@
             this.addquestTitle.Size = new System.Drawing.Size(105, 23);
             this.addquestTitle.TabIndex = 14;
             this.addquestTitle.Text = "AddQuest";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
+            this.panel2.Location = new System.Drawing.Point(1, 28);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 2);
+            this.panel2.TabIndex = 12;
             // 
             // AddQuest
             // 
@@ -166,8 +166,6 @@
         }
 
         #endregion
-
-        private Panel panel2;
         private Button button1;
         private Panel panel1;
         private Label addquestTitle;
@@ -176,5 +174,6 @@
         private Button button2;
         private TextBox txtAnswer;
         private Label label1;
+        private Panel panel2;
     }
 }

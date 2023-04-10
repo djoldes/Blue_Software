@@ -85,7 +85,7 @@ namespace Blue_Software
         private void label3_Click(object sender, EventArgs e)
         {
             new SignUp().Show();
-            this.Hide();
+            this.Close();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

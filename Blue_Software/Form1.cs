@@ -57,13 +57,11 @@ namespace Blue_Software
         
         private void button1_Click(object sender, EventArgs e)
         {
-            AppData.UpdateCurrentUser(AppData.CurrentUser);
             FormFunctions.LoadForm(home, panel3);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AppData.UpdateCurrentUser(AppData.CurrentUser);
             FormFunctions.LoadForm(addquest , panel3);
         }
 
@@ -75,7 +73,6 @@ namespace Blue_Software
 
         private void button5_Click(object sender, EventArgs e)
         {
-            AppData.UpdateCurrentUser(AppData.CurrentUser);
             FormFunctions.LoadForm(leaderboard, panel3);
         }
     }

@@ -51,7 +51,7 @@ namespace Blue_Software
         }
         private void AddQuest_Load(object sender, EventArgs e)
         {
-            txtQuest.Focus();
+            /*txtQuest.Focus();
             CheckDatabase();
             try
             {
@@ -73,7 +73,7 @@ namespace Blue_Software
             finally
             {
                 connection.Close();
-            }
+            }*/
         }
         
         private void button2_Click(object sender, EventArgs e)
@@ -110,8 +110,8 @@ namespace Blue_Software
                 {
                     connection.Close();
                 }
-                txtQuest.ResetText();
-                txtQuest.Text = string.Empty;
+                txtQuest.Text = "";
+                txtAnswer.Text = "";
             }
             else
             {

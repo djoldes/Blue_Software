@@ -39,8 +39,8 @@ namespace Blue_Software
                 command.Parameters.AddWithValue("@Username", AppData.CurrentUser.Username);
                 command.ExecuteNonQuery();
 
-                CurrentUser.Credit = newCredit;
-                CurrentUser.CreditGained = creditGained;
+                AppData.CurrentUser.Credit = newCredit;
+                AppData.CurrentUser.CreditGained = creditGained;
             }
             catch (Exception ex)
             {
