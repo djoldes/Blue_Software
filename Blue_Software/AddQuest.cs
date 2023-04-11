@@ -41,7 +41,7 @@ namespace Blue_Software
             }
             catch (Exception ex)
             {
-                MessageBox.Show("A apărut o eroare: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {
@@ -51,29 +51,6 @@ namespace Blue_Software
         }
         private void AddQuest_Load(object sender, EventArgs e)
         {
-            /*txtQuest.Focus();
-            CheckDatabase();
-            try
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand("SELECT TOP 1 Text FROM Texte ORDER BY Id DESC", connection);
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    reader.Read();
-                    string savedText = reader.GetString(0);
-                    txtQuest.Text = savedText;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("A apărut o eroare: " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }*/
         }
         
         private void button2_Click(object sender, EventArgs e)
@@ -100,11 +77,11 @@ namespace Blue_Software
                     command3.Parameters.AddWithValue("@text", textToSave);
                     command3.ExecuteNonQuery();
 
-                    MessageBox.Show("Text salvat cu succes!");
+                    MessageBox.Show("Text added succesfully!");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("A apărut o eroare: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
                 finally
                 {
@@ -115,7 +92,7 @@ namespace Blue_Software
             }
             else
             {
-                MessageBox.Show("Creditul este prea mic pentru a posta un quest nou." + " " + "Incearca sa rezolvi un quest pentru a castiga credit!");
+                MessageBox.Show("Credit is too low to post a new quest." + " " + "Try to solve a quest to earn credit!");
             }
         }
 

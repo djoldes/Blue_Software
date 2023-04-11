@@ -49,7 +49,7 @@ namespace Blue_Software
             }
             catch (Exception ex)
             {
-                MessageBox.Show("A apărut o eroare: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {

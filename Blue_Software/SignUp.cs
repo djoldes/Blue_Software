@@ -35,7 +35,7 @@ namespace Blue_Software
             }
             else if (txtPassword.Text != txtPasswordCheck.Text)
             {
-                MessageBox.Show("Parolele nu corespund", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Passwords don't match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPassword.Clear();
                 txtPasswordCheck.Clear();
                 txtPassword.Focus();
