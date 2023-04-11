@@ -65,8 +65,8 @@ namespace Blue_Software
 
         private void button3_Click(object sender, EventArgs e)
         {
-            login.Show();
-            this.Close();
+            this.Hide();
+            login.ShowDialog();
         }
 
         private void cbx_password_CheckedChanged(object sender, EventArgs e)
