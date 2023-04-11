@@ -143,9 +143,39 @@ namespace Blue_Software.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_lock_25 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-lock-25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_menu_rounded_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-menu-rounded-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_test_account_25 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-test-account-25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_test_account_25_1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-test-account-25(1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -69,7 +69,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Blue_Software.Properties.Resources.profile_icon1;
+            this.pictureBox2.Image = global::Blue_Software.Properties.Resources.icons8_test_account_25_1_;
             this.pictureBox2.Location = new System.Drawing.Point(27, 166);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
@@ -87,7 +87,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Blue_Software.Properties.Resources.security;
+            this.pictureBox3.Image = global::Blue_Software.Properties.Resources.icons8_lock_25;
             this.pictureBox3.Location = new System.Drawing.Point(27, 218);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 25);
