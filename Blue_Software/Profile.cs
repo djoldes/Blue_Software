@@ -26,10 +26,13 @@ namespace Blue_Software
             string creditGained = AppData.CurrentUser.CreditGained.ToString();
             txtCreditGained.Text = creditGained;
         }
-
+        
         private void logout_Click(object sender, EventArgs e)
         {
-
+            Form form1 = new Form1();   
+            form1.Hide();
+            Form login = new Login();
+            login.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
