@@ -41,7 +41,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
-            this.button2.Location = new System.Drawing.Point(771, -1);
+            this.button2.Location = new System.Drawing.Point(771, -2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(30, 30);
             this.button2.TabIndex = 9;
@@ -78,9 +78,10 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 36);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(795, 526);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(797, 526);
             this.flowLayoutPanel1.TabIndex = 17;
             // 
             // Home

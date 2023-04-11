@@ -56,24 +56,28 @@ namespace Blue_Software
                             User.UpdateCredit(credit += 30, creditGained += 30);
                             MessageBox.Show("The answer is correct!" +
                                 "You won 30 credits!");
+                            this.Close();
                         }
                         else if (answerNumber == 2)
                         {
                             User.UpdateCredit(credit += 20, creditGained += 20);
                             MessageBox.Show("The answer is correct!" +
                                 "You won 20 credits!");
+                            this.Close();
                         }
                         else if (answerNumber == 3)
                         {
                             User.UpdateCredit(credit += 10, creditGained += 10);
                             MessageBox.Show("The answer is correct!" +
                                 "You won 10 credits!");
+                            this.Close();
                         }
                         else if(answerNumber > 3)
                         {
                             MessageBox.Show("The answer is correct!" +
                                 "Your answer is number:" + answerNumber +
                                 "You did not win any credits!:(");
+                            this.Close();
                         }
                     }
                     else

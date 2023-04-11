@@ -38,12 +38,11 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(57)))), ((int)(((byte)(179)))));
             this.label1.Location = new System.Drawing.Point(28, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 34);
+            this.label1.Size = new System.Drawing.Size(748, 285);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
