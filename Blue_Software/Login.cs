@@ -84,7 +84,7 @@ namespace Blue_Software
 
         private void label3_Click(object sender, EventArgs e)
         {
-            new SignUp().Show();
+            new SignUp().ShowDialog();
             this.Close();
         }
 

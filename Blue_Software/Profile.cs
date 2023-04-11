@@ -29,7 +29,7 @@ namespace Blue_Software
         
         private void logout_Click(object sender, EventArgs e)
         {
-            Form form1 = new Form1();   
+            Form form1 = new Form1();
             form1.Close();
             Form login = new Login();
             login.Show();

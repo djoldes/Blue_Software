@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Blue_Software
 {
@@ -42,13 +43,19 @@ namespace Blue_Software
 
             else
             {
-                cmd.CommandText = "INSERT INTO SignUp_Blue (FirstName, LastName, Email, Username, Password, Credit) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "', '" + txtEmail.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', 100)";
+                cmd.CommandText = "INSERT INTO SignUp_Blue (FirstName, LastName, Email, Username, Password, Credit, CreditGained) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "', '" + txtEmail.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', 100, 0)";
                 cmd.ExecuteNonQuery();
+                InitialiseUser(txtUsername.Text);
                 MessageBox.Show("Data added succesfully");
-                form1.Show();
+                form1.ShowDialog();
                 this.Close();
             }
             con.Close();
+        }
+
+        public void InitialiseUser(string username)
+        {
+            AppData.CurrentUser = new User(username, User.GetCreditsForUser(username), User.GetCreditsGainedForUser(username));
         }
 
         private void button2_Click(object sender, EventArgs e)
